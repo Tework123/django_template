@@ -8,7 +8,11 @@ from rest_framework import permissions
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include('account.urls')),
+    # v1
+    path('account/', include('account.api.v1.urls')),
+
+    # v2
+    path('account/v2/', include('account.api.v2.urls')),
 
     path("__debug__/", include("debug_toolbar.urls")),
 ]

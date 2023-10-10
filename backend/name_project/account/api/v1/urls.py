@@ -1,4 +1,6 @@
-from django.urls import path, re_path
+from django.urls import path
+
+from account.api.v1.views import GetUserView
 
 urlpatterns = [
 
@@ -8,5 +10,5 @@ urlpatterns = [
     # path('<int:pk>', UsersEditView.as_view()),
     # path('auth/', AuthUserView.as_view()),
     # path('logout/', UsersLogoutView.as_view()),
-
+    path('', GetUserView.as_view()),
 ]
