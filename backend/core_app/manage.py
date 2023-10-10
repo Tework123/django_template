@@ -10,10 +10,10 @@ def main():
     env = os.environ.get('ENV')
 
     if env == 'production':
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'name_project.settings.production')
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core_app.settings.production')
 
     if env == 'development':
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'name_project.settings.development')
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core_app.settings.development')
 
     try:
         from django.core.management import execute_from_command_line
